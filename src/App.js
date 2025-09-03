@@ -1,33 +1,34 @@
 
-
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import Packages from "./components/Packages";
+import React from 'react'
 import { Toaster } from "react-hot-toast";
-import WhyChooseUs from "./components/WhyChooseUs";
-import Testimonials from "./components/Testimonials";
-import Sponsors from "./components/Sponsors";
-import FeatureProjects from "./components/FeatureProjects";
-import BlogSection from "./components/BlogSection";
-import NewsletterSubscription from "./components/NewsletterSubscription";
-import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
+import Header from './Compounts/Header'
+import Dashboard from './Compounts/Dashboard'
+import HostelSelect from './Compounts/HostelSelect'
+import AttendanceSummary from './Compounts/AttendanceSummary';
+import NoticeBoard from './Compounts/NoticeBoard';
+import ProfileCard from './Compounts/ProfileCard';
+import FileUploader from './Compounts/FileUploader';
+import DualForms from "./Compounts/DualForms";
+import Footer from './Compounts/Footer';
+import WardenSlider from './Compounts/WardenSlider';
 
 export default function App() {
   return (
-    <div>
-      <Navbar />
-      <HeroSection />
-         <Packages />
-         <WhyChooseUs />
-         <Testimonials/>
-         <Sponsors/>
-         <FeatureProjects/>
-         <BlogSection/>
-         <NewsletterSubscription/>
-         <ContactSection/>
-         <Footer/>
-      <Toaster position="top-center" reverseOrder={false} />
+    <>
+       <Header/>
+       <Dashboard/>
+       <HostelSelect/>
+      <div className="min-h-screen flex items-center justify-center bg-gray-200 p-4">
+      <AttendanceSummary />
+      <Toaster position="top-right" />
     </div>
-  );
+    < NoticeBoard/>
+    <ProfileCard/>
+    <FileUploader/>
+    <DualForms />
+    <WardenSlider />
+    <Footer/>
+
+    </>
+  )
 }
